@@ -346,7 +346,7 @@
                         android:layout_width="@dimen/card_width"
                         android:layout_height="@dimen/card_height"
                         android:layout_marginEnd="@dimen/medium_margin"
-                        android:src="@drawable/anime_series" />
+                        android:src="@drawable/men" />
 
                     <ImageView
                         android:layout_width="@dimen/card_width"
