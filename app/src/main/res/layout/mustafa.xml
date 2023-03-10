@@ -43,7 +43,8 @@
         android:hint="password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/textUserName"
+        android:drawableRight="@drawable/outline_remove_red_eye_24"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
