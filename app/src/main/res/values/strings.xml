@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">spaceToonTask</string>
     <string name="home">Home</string>
+    <string name="spacetoon_planets">Spacetoon Planets</string>
 </resources>
