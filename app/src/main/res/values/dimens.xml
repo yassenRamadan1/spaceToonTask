@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="editTextHeight">48dp</dimen>
+    <dimen name="marginEnd">16dp</dimen>
+    <dimen name="editTextMargin">16dp</dimen>
+    <dimen name="editTextMarginTop">16dp</dimen>
+    <dimen name="editTextPadding">16dp</dimen>
+    <dimen name="editTextSize">12sp</dimen>
+</resources>
