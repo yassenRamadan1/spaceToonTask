@@ -8,6 +8,6 @@
     <color name="black">#121212</color>
     <color name="base_white">#FAFAFA</color>
     <color name="grey_nav_button">#61646B</color>
-    <color name="clicked_home_nav_gold_color">#C87F44</color>
+    <color name="clicked_home_nav_gold_color">#4DC87F44</color>
     <color name="white_87">#DEFAFAFA</color>
 </resources>
