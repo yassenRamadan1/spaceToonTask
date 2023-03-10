@@ -8,4 +8,14 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/editTextSize</item>
+        <item name="android:textColorHint">@color/text_color</item>
+        <item name="android:background">@drawable/edit_text</item>
+        <item name="android:padding">@dimen/editTextPadding</item>
+        <item name="android:layout_marginEnd">@dimen/marginEnd</item>
+        <item name="android:layout_marginStart">@dimen/editTextMargin</item>
+    </style>
+
+
 </resources>
