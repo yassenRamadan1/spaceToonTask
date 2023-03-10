@@ -156,6 +156,215 @@
                 </LinearLayout>
 
             </HorizontalScrollView>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+
+                android:id="@+id/movies_text"
+
+
+                android:fontFamily="@font/home_poppins_medium"
+                android:text="@string/Featured_Movies"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/planet_scroll"
+
+                >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/home_poppins_medium"
+                    android:text="@string/Featured_series"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text"
+                    />
+                <TextView
+                    android:id="@+id/movies_more"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/home_poppins_medium"
+                    android:text="more>>"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text"
+                    />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/movies_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movies_text">
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/scooby_doo" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/cars" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/ben_ten" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/marvel" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/anime_movie" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/truck" />
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/batman" />
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/lion_king" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movies_scroll"
+                android:id="@+id/series_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+
+                >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/home_poppins_medium"
+                    android:text="@string/Featured_series"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text"
+                    />
+                <TextView
+                    android:id="@+id/series_more"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/home_poppins_medium"
+                    android:text="more>>"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text"
+                    />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/series_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/series_text">
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/samurai" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/naruto" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/dumbo" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/alice" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/series_anime" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/anime_series" />
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/hunter" />
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/maged" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
