@@ -11,4 +11,10 @@
     <dimen name="you_dont_have_account">12sp</dimen>
     <dimen name="Sign_up_text">12sp</dimen>
     <dimen name="title_login">18sp</dimen>
+    <dimen name="large_margin">16dp</dimen>
+    <dimen name="small_padding">14dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="medium_text">16sp</dimen>
+    <dimen name="high_margin">30dp</dimen>
+    <dimen name="small_space_margin">4dp</dimen>
 </resources>

@@ -22,5 +22,11 @@
             <item android:color="#00FF00"/>
         </selector>
     </color>
+    <color name="line_color">#14000000</color>
+    <color name="app_bar_color">#DE191A32</color>
+    <color name="light_black">#99121212</color>
+    <color name="button_clicked_color">#B38C60</color>
+    <color name="grey">#5E121212</color>
+    <color name="dark_orange">#DEC06D29</color>
 
 </resources>

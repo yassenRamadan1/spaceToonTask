@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="10dp"
@@ -20,14 +20,11 @@
 
         <ImageButton
             android:id="@+id/action_bar_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:background="@android:color/transparent"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
 
 
         <TextView
@@ -38,16 +35,15 @@
             android:fontFamily="@font/poppins_semibold"
             android:gravity="center"
             android:text="@string/login"
-            android:textColor="#DE191A32"
-            android:textSize="@dimen/title_login"
-            android:textStyle="bold" />
+            android:textColor="@color/app_bar_color"
+            android:textSize="@dimen/title_login" />
     </LinearLayout>
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#14000000"
+        android:background="@color/line_color"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout" />
@@ -55,170 +51,142 @@
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="136dp"
+        android:layout_height="134dp"
+        android:contentDescription="@string/todo"
         android:src="@drawable/image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
         android:id="@+id/textUserName"
         android:layout_width="match_parent"
         android:layout_height="@dimen/editTextHeight"
-        android:layout_marginStart="@dimen/editTextMargin"
+        android:layout_marginHorizontal="@dimen/large_margin"
         android:layout_marginTop="@dimen/editTextMarginTop"
-        android:layout_marginEnd="@dimen/marginEnd"
+        android:autofillHints=""
         android:background="@drawable/edit_text"
         android:fontFamily="@font/poppins"
         android:hint="@string/user_name"
-        android:padding="@dimen/editTextPadding"
+        android:inputType="text"
+        android:paddingVertical="@dimen/small_padding"
+        android:paddingStart="@dimen/editTextPadding"
         android:textColorHint="@color/text_color"
         android:textSize="12sp"
         app:layout_constraintBaseline_toTopOf="@drawable/image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image"
-        android:autofillHints=""
-        android:inputType="text" />
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/password"
         style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/editTextHeight"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/large_margin"
+        android:autofillHints=""
         android:drawableEnd="@drawable/outline_remove_red_eye_24"
         android:fontFamily="@font/poppins"
         android:hint="@string/password"
+        android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUserName"
-        android:autofillHints=""
-        android:inputType="numberPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textUserName" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginTop="@dimen/small_margin"
         android:fontFamily="@font/poppins"
         android:text="@string/forget_password"
-        android:textColor="#99121212"
+        android:textColor="@color/light_black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/b3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_marginHorizontal="@dimen/margin_button"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/button_login_2"
+        android:layout_marginTop="@dimen/large_margin"
+        android:backgroundTint="@color/orange"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/button_login"
+        android:textAllCaps="false"
         android:textColor="@color/color_text_button"
         android:textSize="16sp"
+        app:cornerRadius="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:rippleColor="@color/button_clicked_color" />
 
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/large_margin"
         android:fontFamily="@font/poppins"
         android:text="@string/or"
-        android:textColor="#5E121212"
-        android:textSize="16sp"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/medium_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/b3" />
 
 
-
-    <LinearLayout
-        android:id="@+id/button2"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/face_login_btn"
         android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:background="@drawable/button_facebook"
-        android:layout_marginHorizontal="@dimen/margin_button"
-        android:gravity="center"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/uim_google"
-            android:paddingEnd="12dp"
-            tools:ignore="RtlSymmetry"
-            android:contentDescription="@string/todo" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:fontFamily="@font/poppins_medium"
-            android:text="@string/text_button_google"
-            android:textAllCaps="true"
-            android:textColor="@color/color_text_continue"
-            android:textSize="@dimen/size_text" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/b"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:background="@drawable/button_facebook"
-        android:layout_marginHorizontal="@dimen/margin_button"
-        android:gravity="center"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        android:backgroundTint="#0D7C4B4B"
+        android:text="@string/button_facebook"
+        android:textAllCaps="false"
+        app:cornerRadius="32dp"
+        app:icon="@drawable/face"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:iconTintMode="multiply"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toBottomOf="@id/textView6" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/face"
-            android:padding="10dp"
-            app:tint="#0050B3"
-            android:contentDescription="@string/todo" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:fontFamily="@font/poppins_medium"
-            android:text="@string/button_facebook"
-            android:textAllCaps="true"
-            android:textColor="@color/color_text_continue"
-            android:textSize="@dimen/size_text" />
-
-    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/google_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        android:backgroundTint="#0D7C4B4B"
+        android:text="@string/text_button_google"
+        android:textAllCaps="false"
+        app:cornerRadius="32dp"
+        app:icon="@drawable/uim_google"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/face_login_btn" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/high_margin"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2">
+        app:layout_constraintTop_toBottomOf="@+id/google_login_btn">
 
         <TextView
             android:id="@+id/textView7"
@@ -227,23 +195,21 @@
             android:fontFamily="@font/poppins"
             android:text="@string/you_don_t_have_an_account"
             android:textAlignment="center"
-            android:textColor="#99121212"
+            android:textColor="@color/light_black"
             android:textSize="@dimen/you_dont_have_account"
-            app:layout_constraintEnd_toStartOf="@+id/textView"
-            app:layout_constraintHorizontal_bias="0.747" />
+            app:layout_constraintEnd_toStartOf="@+id/textView" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_space_margin"
             android:fontFamily="@font/poppins"
             android:text="@string/sign_up"
             android:textAlignment="center"
-            android:textColor="#DEC06D29"
-            android:layout_marginStart="4dp"
+            android:textColor="@color/dark_orange"
             android:textSize="@dimen/Sign_up_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.748"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2" />
     </LinearLayout>
