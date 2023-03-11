@@ -3,4 +3,12 @@
     <string name="button_login">login</string>
     <string name="button_facebook">Continue with Facebook</string>
     <string name="text_button_google">Continue with Google</string>
+    <string name="or">or</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="password">password</string>
+    <string name="user_name">user name</string>
+    <string name="login">Login</string>
+    <string name="todo">go back</string>
+    <string name="you_don_t_have_an_account">You don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
 </resources>

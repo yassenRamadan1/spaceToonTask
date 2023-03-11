@@ -2,4 +2,13 @@
 <resources>
     <dimen name="margin_button">16dp</dimen>
     <dimen name="size_text">12sp</dimen>
+    <dimen name="editTextHeight">48dp</dimen>
+    <dimen name="marginEnd">16dp</dimen>
+    <dimen name="editTextMargin">16dp</dimen>
+    <dimen name="editTextMarginTop">16dp</dimen>
+    <dimen name="editTextPadding">16dp</dimen>
+    <dimen name="editTextSize">12sp</dimen>
+    <dimen name="you_dont_have_account">12sp</dimen>
+    <dimen name="Sign_up_text">12sp</dimen>
+    <dimen name="title_login">18sp</dimen>
 </resources>
