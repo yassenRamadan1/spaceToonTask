@@ -3,9 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/drawable-xhdpi/nav_bar_button_clicked.xml" value="0.134" />
+        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/drawable/button_facebook.xml" value="0.134" />
+        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/drawable/button_login_2.xml" value="0.134" />
+        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/drawable/edit_text.xml" value="0.134" />
         <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/drawable/ic_notification.xml" value="0.134" />
         <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/drawable/ic_search.xml" value="0.134" />
-        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/layout/activity_main.xml" value="0.10400000000000001" />
+        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/drawable/nav_bar_button.xml" value="0.134" />
+        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/layout/navigation_button.xml" value="0.20436083796494228" />
+        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/menu/nav_item.xml" value="0.20436083796494228" />
+        <entry key="..\:/Users/kikok/AndroidStudioProjects/spaceToonTask/app/src/main/res/mipmap-anydpi-v26/ic_person.xml" value="0.1135" />
       </map>
     </option>
   </component>
