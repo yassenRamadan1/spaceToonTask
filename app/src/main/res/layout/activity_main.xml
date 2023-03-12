@@ -4,15 +4,576 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/base_white"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:background="@color/white_87"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/home_poppins_semibold"
+            android:gravity="center"
+            android:text="@string/home"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:src="@drawable/ic_notification" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/main_scorll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:scrollbarSize="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:id="@+id/poster_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="0dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_poster"
+                        android:src="@drawable/naruto_poster" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_poster"
+                        android:src="@drawable/mario_poster" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_poster"
+                        android:src="@drawable/pokemon_poster" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/planet_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:fontFamily="@font/home_poppins_medium"
+                android:text="@string/spacetoon_planets"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/poster_scroll" />
+
+            <HorizontalScrollView
+                android:id="@+id/planet_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/planet_text">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/card_size"
+                        android:layout_height="@dimen/card_size"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/planet_action" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_size"
+                        android:layout_height="@dimen/card_size"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/planet_sport" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_size"
+                        android:layout_height="@dimen/card_size"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/planet_comedy" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_size"
+                        android:layout_height="@dimen/card_size"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/planet_adv" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_size"
+                        android:layout_height="@dimen/card_size"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/planet_zom" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_size"
+                        android:layout_height="@dimen/card_size"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/planet_girl" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/movie_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:fontFamily="@font/home_poppins_medium"
+                android:text="@string/Featured_Movies"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/planet_scroll" />
+
+            <TextView
+                android:id="@+id/movies_more"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:fontFamily="@font/home_poppins_medium"
+                android:gravity="end"
+                android:text="@string/more"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintBaseline_toBaselineOf="@id/movie_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/planet_scroll" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/movies_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_text">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/scooby_doo" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/cars" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/ben_ten" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/marvel" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/anime_movie" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/truck" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/batman" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/lion_king" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/series_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:fontFamily="@font/home_poppins_medium"
+                android:text="@string/Featured_series"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movies_scroll" />
+
+            <TextView
+                android:id="@+id/series_more"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:layout_weight="1"
+                android:fontFamily="@font/home_poppins_medium"
+                android:gravity="end"
+                android:text="@string/more"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintBaseline_toBaselineOf="@id/series_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movies_scroll" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/series_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/series_text">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/samurai" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/naruto" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/dumbo" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/alice" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/anime_series" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/men" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/hunter" />
+
+                    <ImageView
+                        android:layout_width="@dimen/card_width"
+                        android:layout_height="@dimen/card_height"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:src="@drawable/maged" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/song_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:fontFamily="@font/home_poppins_medium"
+                android:text="@string/spacetoon_songs"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/series_scroll" />
+
+            <TextView
+                android:id="@+id/song_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:fontFamily="@font/home_poppins_medium"
+                android:text="@string/more"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintBaseline_toBaselineOf="@id/song_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/series_scroll" />
+
+            <HorizontalScrollView
+                android:id="@+id/song_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/song_text">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/songCard"
+                        android:src="@drawable/image_song_1" />
+
+                    <ImageView
+                        style="@style/songCard"
+                        android:src="@drawable/image_song_2" />
+
+                    <ImageView
+                        style="@style/songCard"
+                        android:src="@drawable/image_song_3" />
+
+                    <ImageView
+                        style="@style/songCard"
+                        android:src="@drawable/image_song_4" />
+
+                    <ImageView
+                        style="@style/songCard"
+                        android:src="@drawable/image_song_5" />
+
+                    <ImageView
+                        style="@style/songCard"
+                        android:src="@drawable/image_song_6" />
+
+                    <ImageView
+                        style="@style/songCard"
+                        android:src="@drawable/image_song_7" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/hero_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:fontFamily="@font/home_poppins_medium"
+                android:text="@string/spacetoon_heros"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/song_scroll" />
+
+            <HorizontalScrollView
+                android:id="@+id/hero_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:scrollbarSize="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hero_text">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/HeroCard"
+                        android:src="@drawable/image_hero_1" />
+
+                    <ImageView
+                        style="@style/HeroCard"
+                        android:src="@drawable/image_hero_2" />
+
+                    <ImageView
+                        style="@style/HeroCard"
+                        android:src="@drawable/image_hero_3" />
+
+                    <ImageView
+                        style="@style/HeroCard"
+                        android:src="@drawable/image_hero_4" />
+
+                    <ImageView
+                        style="@style/HeroCard"
+                        android:src="@drawable/image_hero_5" />
+
+                    <ImageView
+                        style="@style/HeroCard"
+                        android:src="@drawable/image_hero_6" />
+
+                    <ImageView
+                        style="@style/HeroCard"
+                        android:src="@drawable/image_hero_7" />
+
+                    <ImageView
+                        style="@style/HeroCard"
+                        android:src="@drawable/image_hero_8" />
+
+                    <ImageView
+                        style="@style/HeroCard"
+                        android:src="@drawable/image_hero_9" />
+
+                    <ImageView
+                        style="@style/HeroCard"
+                        android:src="@drawable/image_hero_10" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/NavBarButton"
+                android:background="@drawable/nav_bar_button"
+                android:drawableStart="@drawable/ic_home" />
+
+            <TextView
+                style="@style/NavBarText"
+                android:text="@string/home_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/NavBarButton"
+                android:background="@drawable/nav_bar_button"
+                android:drawableStart="@drawable/ic_search" />
+
+            <TextView
+                style="@style/NavBarText"
+                android:text="@string/explore_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/NavBarButton"
+                android:background="@drawable/nav_bar_button"
+                android:drawableStart="@drawable/ic_favourite" />
+
+            <TextView
+                style="@style/NavBarText"
+                android:text="@string/favourite_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/NavBarButton"
+                android:background="@drawable/nav_bar_button"
+                android:drawableStart="@drawable/ic_user" />
+
+            <TextView
+                style="@style/NavBarText"
+                android:text="@string/profile_icon" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
