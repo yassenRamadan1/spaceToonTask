@@ -518,7 +518,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NavBarButton"
-                android:background="@drawable/nav_bar_button"
+                android:background="@drawable/nav_bar_button_clicked"
                 android:drawableStart="@drawable/ic_home" />
 
             <TextView

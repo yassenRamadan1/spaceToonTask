@@ -12,4 +12,7 @@
     <string name="Featured_series">Featured series</string>
     <string name="more"><![CDATA[more>>]]></string>
     <string name="kamel"><![CDATA[more>>]]></string>
+    <string name="explore">Explore</string>
+    <string name="favorite">Favorite</string>
+    <string name="profile">Profile</string>
 </resources>
