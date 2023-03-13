@@ -11,4 +11,5 @@
     <color name="clicked_home_nav_gold_color">#4DC87F44</color>
     <color name="white_87">#DEFAFAFA</color>
     <color name="grey">#99121212</color>
+    <color name="line_color">#14000000</color>
 </resources>
