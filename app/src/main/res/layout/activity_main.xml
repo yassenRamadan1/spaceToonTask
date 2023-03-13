@@ -42,7 +42,12 @@
             android:src="@drawable/ic_notification"
             tools:ignore="ContentDescription" />
     </LinearLayout>
-
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
     <ScrollView
         android:id="@+id/main_scorll"
         android:layout_width="match_parent"
