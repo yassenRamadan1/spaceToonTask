@@ -18,10 +18,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <View
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/view_size"
+            android:layout_height="@dimen/view_size"
             android:layout_gravity="center"
-            android:layout_marginStart="16dp" />
+            android:layout_marginStart="@dimen/medium_margin" />
 
         <TextView
             android:layout_width="0dp"
