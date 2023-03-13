@@ -42,12 +42,7 @@
             android:src="@drawable/ic_notification"
             tools:ignore="ContentDescription" />
     </LinearLayout>
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_color"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
     <ScrollView
         android:id="@+id/main_scorll"
         android:layout_width="match_parent"
@@ -58,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
         app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -422,6 +417,13 @@
 
     </ScrollView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#14000000"
+        app:layout_constraintBottom_toTopOf="@id/navigation_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     <LinearLayout
         android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
