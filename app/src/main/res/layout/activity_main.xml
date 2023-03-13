@@ -467,7 +467,8 @@
             <TextView
                 style="@style/NavBarText"
                 android:text="@string/favourite_icon"
-                android:textColor="@color/grey" />
+                android:textColor="@color/grey"
+                tools:ignore="TooManyViews" />
         </LinearLayout>
 
         <LinearLayout
