@@ -3,6 +3,200 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/action_bar_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/logo_back"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="@string/movies"
+            android:textColor="@color/app_bar_color"
+            android:textSize="@dimen/app_bar_text" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/comedy_btn"
+        style="@style/TabButtons"
+        android:text="@string/comedy"
+        android:textColor="@color/tab_button_text_color"
+        android:textSize="@dimen/medium_text"
+        app:cornerRadius="@dimen/small_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:strokeColor="@color/orange"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/action_btn"
+        style="@style/TabButtons"
+        android:text="@string/action"
+        android:textColor="@color/tab_button_text_color"
+        android:textSize="@dimen/medium_text"
+        app:cornerRadius="@dimen/small_radius"
+        app:layout_constraintStart_toEndOf="@id/comedy_btn"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:strokeColor="@color/orange"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/classic_btn"
+        style="@style/TabButtons"
+        android:backgroundTint="@color/orange"
+        android:text="@string/classic"
+        android:textColor="@color/light_white"
+        android:textSize="@dimen/medium_text"
+        app:cornerRadius="@dimen/small_radius"
+        app:layout_constraintStart_toEndOf="@id/action_btn"
+        app:layout_constraintTop_toTopOf="@id/view" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_btn">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                style="@style/CardImage"
+                android:contentDescription="@string/movies"
+                android:src="@drawable/movie_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                style="@style/CardImage"
+                android:contentDescription="@string/movies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.45"
+                app:srcCompat="@drawable/movie_1" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                style="@style/CardImage"
+                android:contentDescription="@string/movies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintWidth_percent="0.45"
+                app:srcCompat="@drawable/movie_3" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                style="@style/CardImage"
+                android:contentDescription="@string/movies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                app:layout_constraintWidth_percent="0.45"
+                app:srcCompat="@drawable/movie_4" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                style="@style/CardImage"
+                android:contentDescription="@string/movies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                app:layout_constraintWidth_percent="0.45"
+                app:srcCompat="@drawable/movie_5" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                style="@style/CardImage"
+                android:contentDescription="@string/movies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8"
+                app:layout_constraintWidth_percent="0.45"
+                app:srcCompat="@drawable/movie_6" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                style="@style/CardImage"
+                android:contentDescription="@string/movies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                app:layout_constraintWidth_percent="0.45"
+                app:srcCompat="@drawable/movie_7" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                style="@style/CardImage"
+                android:contentDescription="@string/movies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                app:layout_constraintTop_toBottomOf="@+id/imageView10"
+                app:layout_constraintWidth_percent="0.45"
+                app:srcCompat="@drawable/movie_8" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                style="@style/CardImage"
+                android:contentDescription="@string/movies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView11"
+                app:layout_constraintWidth_percent="0.45"
+                app:srcCompat="@drawable/movie_9" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                style="@style/CardImage"
+                android:contentDescription="@string/movies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                app:layout_constraintTop_toBottomOf="@+id/imageView12"
+                app:layout_constraintWidth_percent="0.45"
+                app:srcCompat="@drawable/movie_10" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView13" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

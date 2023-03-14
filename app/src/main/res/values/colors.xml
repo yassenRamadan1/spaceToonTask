@@ -5,6 +5,11 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="black">#121212</color>
+    <color name="white">#FAFAFA</color>
+    <color name="orange">#EB9F4A</color>
+    <color name="app_bar_color">#DE191A32</color>
+    <color name="line_color">#14000000</color>
+    <color name="tab_button_text_color">#99121212</color>
+    <color name="light_white">#DEFAFAFA</color>
 </resources>
