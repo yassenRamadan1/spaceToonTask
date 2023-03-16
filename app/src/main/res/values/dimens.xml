@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_text">18sp</dimen>
+    <dimen name="medium_text">14sp</dimen>
+    <dimen name="small_text">12sp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="medium_margin">16dp</dimen>
+    <dimen name="large_margin">31dp</dimen>
+    <dimen name="height_poster">170dp</dimen>
+    <dimen name="card_size">80dp</dimen>
+    <dimen name="card_width">104dp</dimen>
+    <dimen name="card_height">120dp</dimen>
+    <dimen name="song_card_width">120dp</dimen>
+    <dimen name="song_card_height">88dp</dimen>
+    <dimen name="app_bar_height">56dp</dimen>
+    <dimen name="nav_bar_height">80dp</dimen>
+    <dimen name="navbar_icon_width">56dp</dimen>
+    <dimen name="navbar_icon_height">32dp</dimen>
+    <dimen name="view_size">24dp</dimen>
+
+
+</resources>

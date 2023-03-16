@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">spaceToonTask</string>
+    <string name="home">Home</string>
+    <string name="spacetoon_planets">Spacetoon Planets</string>
+    <string name="spacetoon_songs">Spacetoon songs</string>
+    <string name="spacetoon_heros">Spacetoon Heros</string>
+    <string name="profile_icon">Profile</string>
+    <string name="favourite_icon">Favourite</string>
+    <string name="explore_icon">Explore</string>
+    <string name="home_icon">Home</string>
+    <string name="Featured_Movies">Featured Movies</string>
+    <string name="Featured_series">Featured series</string>
+    <string name="more"><![CDATA[More>>]]></string>
+    <string name="explore">Explore</string>
+    <string name="favorite">Favorite</string>
+    <string name="profile">Profile</string>
 </resources>
